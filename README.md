@@ -79,3 +79,23 @@ erDiagram
   employee ||--o{ employee_events : "employee_id"
   notes }o--o{ employee_events : ""
 ```
+
+### Tools and Libraries
+- Python
+- pandas
+- numpy
+- matplotlib
+- scikit-learn
+- HTML
+- CSS
+- JOSN
+- Visual Studio Code
+- Git
+
+### References
+- [Github Repository Link from Udacity](https://github.com/udacity/dsnd-dashboard-project)
+- Udacity Data Scientist Nanodegree
+
+### Author
+This project was created as part of a learning journey in data science and applied machine learning in Udacity Courses. 
+Created By Alaa Alaboud.
