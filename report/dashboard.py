@@ -1,10 +1,9 @@
 from fasthtml.common import *  # noqa: F403, F401
-from fasthtml.common import H1, Div, FastHTML, serve
 import matplotlib.pyplot as plt
 import numpy as np
 
 # Import QueryBase, Employee, Team from employee_events
-from employee_events import Employee, Team
+from employee_events import QueryBase, Employee, Team
 
 # import the load_model function from the utils.py file
 from utils import load_model
