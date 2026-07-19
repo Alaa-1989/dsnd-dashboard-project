@@ -9,3 +9,8 @@ flake8
 ipython
 #### Add text to install the python-package here
 -e ./python-package
+
+starlette==0.41.2
+fastcore==1.7.18
+fastlite==0.0.9
+sqlite-minutils==4.0.3

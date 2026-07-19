@@ -92,21 +92,21 @@ erDiagram
 - Visual Studio Code
 - Git
 
-## How to Run
+## Setup
 
 Create a virtual environment:
 
 ```bash
-python3 -m venv .venv
+python3.10 -m venv .venv
 ```
 
-Activate the virtual environment:
+Activate it:
 
 ```bash
 source .venv/bin/activate
 ```
 
-Install the required packages:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
