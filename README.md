@@ -100,7 +100,6 @@ erDiagram
 To make test
 - pytest
 
-
 ### References
 - [Github Repository Link from Udacity](https://github.com/udacity/dsnd-dashboard-project)
 - Udacity Data Scientist Nanodegree
