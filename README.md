@@ -3,7 +3,7 @@
 
 This repository contains starter code for the **Software Engineering for Data Scientists** final project. Please reference your course materials for documentation on this repository's structure and important files. Happy coding!
 
-### Repository Structure
+## Repository Structure
 ```
 ├── README.md
 ├── assets
@@ -40,7 +40,7 @@ This repository contains starter code for the **Software Engineering for Data Sc
     └── test_employee_events.py
 ```
 
-### employee_events.db
+## employee_events.db
 
 ```mermaid
 erDiagram
@@ -80,7 +80,7 @@ erDiagram
   notes }o--o{ employee_events : ""
 ```
 
-### Tools and Libraries
+## Tools and Libraries
 - Python
 - pandas
 - numpy
@@ -92,18 +92,42 @@ erDiagram
 - Visual Studio Code
 - Git
 
-### How to Run
+## How to Run
 
-- pip install -r requirements.txt
-- python report/dashboard.py
+Create a virtual environment:
 
-To make test
-- pytest
+```bash
+python3 -m venv review_env
+```
 
-### References
+Activate the virtual environment:
+
+```bash
+source review_env/bin/activate
+```
+
+Install the required packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the dashboard:
+
+```bash
+python report/dashboard.py
+```
+
+Run the tests:
+
+```bash
+pytest
+```
+
+## References
 - [Github Repository Link from Udacity](https://github.com/udacity/dsnd-dashboard-project)
 - Udacity Data Scientist Nanodegree
 
-### Author
+## Author
 This project was created as part of a learning journey in data science and applied machine learning in Udacity Courses. 
 Created By Alaa Alaboud.
