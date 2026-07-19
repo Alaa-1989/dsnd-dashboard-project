@@ -92,6 +92,15 @@ erDiagram
 - Visual Studio Code
 - Git
 
+### How to Run
+
+- pip install -r requirements.txt
+- python report/dashboard.py
+
+To make test
+- pytest
+
+
 ### References
 - [Github Repository Link from Udacity](https://github.com/udacity/dsnd-dashboard-project)
 - Udacity Data Scientist Nanodegree
