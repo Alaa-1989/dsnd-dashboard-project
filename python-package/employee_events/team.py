@@ -53,9 +53,9 @@ class Team(QueryBase):
             FROM
                 team
             WHERE
-                team_id = {id}
+                team_id = ?
         """
-        return self.query(sql_query)
+        return self.query(sql_query, (id,))
 
     # Below is method with an SQL query
     # This SQL query generates the data needed for
@@ -76,8 +76,11 @@ class Team(QueryBase):
                     FROM {self.name}
                     JOIN employee_events
                         USING({self.name}_id)
-                    WHERE {self.name}.{self.name}_id = {id}
+                    WHERE {self.name}.{self.name}_id = ?
                     GROUP BY employee_id
                    )
                 """
-        return self.pandas_query(sql_query)
+        return self.pandas_query(
+            sql_query,
+            (id,)
+        )
