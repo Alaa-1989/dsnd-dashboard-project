@@ -2,7 +2,7 @@ from pathlib import Path
 from setuptools import setup, find_packages
 
 cwd = Path(__file__).resolve().parent
-requirements = (cwd / 'requirements.txt').read_text().split('\n')  #noqa: E501
+requirements = (cwd / 'requirements.txt').read_text().split('\n')  # noqa: E501
 
 setup_args = dict(
     name='employee_events',

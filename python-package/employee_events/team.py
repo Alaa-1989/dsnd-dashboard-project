@@ -47,7 +47,7 @@ class Team(QueryBase):
         # Use f-string formatting and a WHERE filter
         # to only return the team name related to
         # the ID argument
-        sql_query = f"""
+        sql_query = """
             SELECT
                 team_name
             FROM

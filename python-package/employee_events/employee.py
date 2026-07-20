@@ -51,7 +51,7 @@ class Employee(QueryBase):
         # Use f-string formatting and a WHERE filter
         # to only return the full name of the employee
         # with an id equal to the id argument
-        sql_query = f"""
+        sql_query = """
             SELECT
                 first_name || ' ' || last_name AS full_name
             FROM

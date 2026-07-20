@@ -18,7 +18,7 @@ class QueryMixin:
     # and returns the query's result
     # as a pandas dataframe
     def pandas_query(
-            self, 
+            self,
             sql_query: str,
             params: tuple = ()
     ) -> pd.DataFrame:
