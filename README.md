@@ -1,7 +1,23 @@
 
-# Software Engineering for Data Scientists 
+# Employee Performance Dashboard
 
-This repository contains starter code for the **Software Engineering for Data Scientists** final project. Please reference your course materials for documentation on this repository's structure and important files. Happy coding!
+## Project Overview
+
+This project is an interactive employee dashboard built with FastHTML, Pandas, and Matplotlib.
+
+The dashboard allows users to explore employee and team performance through visualizations and machine learning predictions.
+
+### Dashboard Features
+
+- Select either an Employee or a Team profile.
+- View employee event history over time.
+- Display positive and negative event trends.
+- View employee notes and profile information.
+- Display a machine learning prediction that estimates employee attrition risk.
+
+### Machine Learning Prediction
+
+The prediction chart shows the probability that an employee is at risk of leaving the company based on the trained Logistic Regression model.
 
 ## Repository Structure
 ```
@@ -40,7 +56,9 @@ This repository contains starter code for the **Software Engineering for Data Sc
     └── test_employee_events.py
 ```
 
-## employee_events.db
+## Database Schema
+
+**Database:** `employee_events.db`
 
 ```mermaid
 erDiagram
@@ -88,7 +106,7 @@ erDiagram
 - scikit-learn
 - HTML
 - CSS
-- JOSN
+- JSON
 - Visual Studio Code
 - Git
 
@@ -118,6 +136,11 @@ Run the dashboard:
 python report/dashboard.py
 ```
 
+Open your browser and visit:
+```bash
+http://localhost:5001
+```
+
 Run the tests:
 
 ```bash
@@ -129,5 +152,5 @@ pytest
 - Udacity Data Scientist Nanodegree
 
 ## Author
-This project was created as part of a learning journey in data science and applied machine learning in Udacity Courses. 
-Created By Alaa Alaboud.
+This project was developed as part of the Udacity Data Scientist Nanodegree to demonstrate software engineering, data visualization, and machine learning concepts.
+Created by Alaa Alaboud.

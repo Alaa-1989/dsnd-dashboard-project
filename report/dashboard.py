@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Import QueryBase, Employee, Team from employee_events
-from employee_events import QueryBase, Employee, Team
+from employee_events import Employee, Team
 
 # import the load_model function from the utils.py file
 from utils import load_model
@@ -67,7 +67,7 @@ class Header(BaseComponent):
             if model.name == 'employee'
             else 'Team Performance'
         )
-        return H1(title)
+        return H1(title)  # noqa: F405
 
 
 # Create a subclass of base_components/MatplotlibViz
@@ -105,6 +105,20 @@ class LineChart(MatplotlibViz):
         # and assign the figure and axis
         # to variables
         fig, ax = plt.subplots()
+
+        # Display a message when no data is available
+        # instead of attempting to plot an empty dataframe
+        if data.empty:
+            ax.text(
+                0.5,
+                0.5,
+                'No Data Available',
+                horizontalalignment='center',
+                verticalalignment='center',
+                transform=ax.transAxes,
+                fontsize=12
+            )
+            return
 
         # call the .plot method for the
         # cumulative counts dataframe
@@ -148,6 +162,21 @@ class BarChart(MatplotlibViz):
         # learning model
         data = model.model_data(entity_id)
 
+    # Display a message when no predictions data is available
+        if data.empty or data.isna().any().any():
+            fig, ax = plt.subplots()
+            ax.text(
+                0.5,
+                0.5,
+                'No Predictions Available',
+                horizontalalignment='center',
+                verticalalignment='center',
+                transform=ax.transAxes,
+                fontsize=12
+            )
+            ax.set_axis_off()
+            return
+
         # Using the predictor class attribute
         # pass the data to the `predict_proba` method
         prediction = self.predictor.predict_proba(data)
@@ -181,6 +210,13 @@ class BarChart(MatplotlibViz):
             color=[color]
         )
         ax.set_xlim(0, 1)
+        ax.text(
+            pred + 0.02,
+            0,
+            f"{pred:.1%}",
+            va='center',
+            fontsize=12
+        )
         ax.set_title('Predicted Recruitment Risk', fontsize=20)
 
         # pass the axis variable
@@ -208,7 +244,7 @@ class Visualizations(CombinedComponent):
     ]
 
     # Leave this line unchanged
-    outer_div_type = Div(cls='grid')
+    outer_div_type = Div(cls='grid')  # noqa: F405
 
 # Create a subclass of base_components/DataTable
 # called `NotesTable`
@@ -264,7 +300,7 @@ class Report(CombinedComponent):
 
 
 # Initialize a fasthtml app
-app = FastHTML()
+app = FastHTML()  # noqa: F405
 
 # Initialize the `Report` class
 report = Report()
@@ -339,4 +375,4 @@ async def update_data(r):
         return RedirectResponse(f"/team/{id}", status_code=303)
 
 
-serve()
+serve()  # noqa: F405

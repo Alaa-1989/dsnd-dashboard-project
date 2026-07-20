@@ -1,4 +1,4 @@
-class BaseComponent:  # noqa: W293
+class BaseComponent:
 
     def build_component(self, entity_id, model):
         raise NotImplementedError
@@ -7,8 +7,8 @@ class BaseComponent:  # noqa: W293
         return component
 
 
-    def component_data(self, entity_id, model):  # noqa: E303
-        raise NotImplemented  # noqa: F901
+    def component_data(self, entity_id, model):   # noqa: E303
+        raise NotImplementedError
 
     def __call__(self, entity_id, model):
 
